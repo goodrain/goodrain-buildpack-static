@@ -1,37 +1,21 @@
-Static Build Pack
+Static  buildpack
 ========================
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for static websites, or whatever you want.
+云帮的静态网页项目的源码构建核心部分是基于 [Heroku buildpack for static websites](http://devcenter.heroku.com/articles/buildpack)实现的。
 
-Use
+工作原理
 -------
 
-    $ ls
-    index.html      somedir/
-    $ git init
-    $ heroku create --stack cedar --buildpack https://github.com/pearkes/heroku-buildpack-static
-    $ git add .
-    $ git commit -m "initial commit"
-    $ git push heroku master
+当buildpack在您应用的代码根目录下检测到`index.html` 文件，它会识别应用为Static(静态网页)。
 
-Optional Configuration
--------
-The Apache configuration file is located in `conf/httpd.conf`. To customize, fork and use your fork as the buildpack url on app create.
-
-Improving
+文档
 -------
 
-To test changes to this buildpack, fork it on Github. Push up changes to your fork, then create a test app with --buildpack <your-github-url> and push to it.
+以下文章了解更多：
 
-All improvements are appreciated!
+- [云帮支持Html](http://www.rainbond.com/docs/stable/user-lang-docs/html/lang-html-overview.html)
 
-License
--------
 
-Copyright (c) 2012 Jack Pearkes
+## 授权
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+根据 MIT 授权证获得许可。 请参阅LICENSE文件
