@@ -1,7 +1,7 @@
 Static  buildpack
 ========================
 
-云帮的静态网页项目的源码构建核心部分是基于 [Heroku buildpack for static websites](http://devcenter.heroku.com/articles/buildpack)实现的。
+云帮静态网页项目的源码构建核心部分是基于 [Heroku buildpack for static ](https://github.com/heroku/heroku-buildpack-static)实现的。
 
 工作原理
 -------
@@ -18,4 +18,4 @@ Static  buildpack
 
 ## 授权
 
-根据 MIT 授权证获得许可。 请参阅LICENSE文件
+根据 MIT 授权获得许可。 请参阅LICENSE文件
