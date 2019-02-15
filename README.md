@@ -1,7 +1,7 @@
 Static  buildpack
 ========================
 
-云帮静态网页项目的源码构建核心部分是基于 [Heroku buildpack for static ](https://github.com/heroku/heroku-buildpack-static)实现的。
+Rainbond静态html项目的源码构建核心部分是基于[Heroku buildpack for static ](https://github.com/heroku/heroku-buildpack-static)实现的。
 
 工作原理
 -------
@@ -11,9 +11,25 @@ Static  buildpack
 文档
 -------
 
-以下文章了解更多：
+## Nginx
 
-- [云帮支持Html](http://www.rainbond.com/docs/stable/user-lang-docs/html/lang-html-overview.html)
+默认使用最新稳定版本Nginx v1.14.2
+
+#### 自定义Nginx配置
+
+需要在源码根目录定义nginx配置文件：`web.conf`,默认配置文件为
+
+```
+server {
+    listen       80;
+    
+    location / {
+        root   /app/www;
+        index  index.html index.htm;
+    }
+}
+```
+
 
 
 ## 授权
